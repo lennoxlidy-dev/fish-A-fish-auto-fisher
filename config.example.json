@@ -1,0 +1,113 @@
+{
+  "_comment": "EXAMPLE ONLY - positions/colours here are made up. Run setup.bat to make your own config.json.",
+  "hotkeys": {
+    "toggle": "f6",
+    "quit": "f7",
+    "capture": "f8"
+  },
+  "start_paused": true,
+  "require_roblox_focus": true,
+  "click_position": [960, 540],
+  "wiggle_mouse": true,
+  "loop_hz": 100,
+  "cast": {
+    "input": "mouse",
+    "hold_seconds": 0.0,
+    "release_when": null,
+    "max_hold_seconds": 3.0,
+    "wait_after": 0.5
+  },
+  "bite": {
+    "method": "detect",
+    "wait_seconds": 3.0,
+    "detector": {
+      "region": [930, 380, 60, 60],
+      "color": [255, 60, 60],
+      "tolerance": 30,
+      "min_pixels": 40,
+      "invert": false
+    },
+    "timeout": 30.0,
+    "reaction_delay": [0.05, 0.15],
+    "on_bite": [
+      {
+        "click": "default"
+      }
+    ],
+    "on_timeout": []
+  },
+  "reel": {
+    "method": "bar",
+    "input": "mouse",
+    "clicks_per_second": 12,
+    "duration": 8.0,
+    "active_detector": null,
+    "start_timeout": 3.0,
+    "end_grace": 0.6,
+    "max_seconds": 90.0,
+    "bar": {
+      "region": [660, 880, 600, 40],
+      "hold_moves": "right",
+      "fish_color": [240, 200, 40],
+      "bar_color": [100, 220, 100],
+      "tolerance": 30,
+      "min_pixels": 4,
+      "max_gap": 20,
+      "deadzone": 4.0,
+      "lookahead": 0.15
+    },
+    "zone": {
+      "region": null,
+      "axis": "auto",
+      "marker_color": null,
+      "target_color": null,
+      "tolerance": 30,
+      "min_pixels": 3,
+      "max_gap": 12,
+      "margin": 2.0,
+      "lookahead": 0.03,
+      "cooldown": 0.3
+    },
+    "target": {
+      "region": null,
+      "color": null,
+      "tolerance": 30,
+      "min_pixels": 30,
+      "max_gap": 4,
+      "cooldown": 0.2
+    }
+  },
+  "after_catch": {
+    "actions": [
+      {
+        "press": "e"
+      }
+    ],
+    "wait": 1.0
+  },
+  "auto_sell": {
+    "enabled": false,
+    "every": 50,
+    "actions": [
+      {
+        "press": "g"
+      },
+      {
+        "wait": 1.0
+      },
+      {
+        "click": [1500, 700]
+      },
+      {
+        "wait": 1.0
+      },
+      {
+        "press": "g"
+      }
+    ]
+  },
+  "humanize": {
+    "timing_jitter": 0.1,
+    "click_jitter_px": 2
+  }
+}
